@@ -15,9 +15,7 @@ const sendermessage=await pool.query('SELECT * FROM user_message WHERE sender_id
 if(sendermessage.rowCount!==0){
 const mymessages=sendermessage.rows
 return res.status(200).json({myData:mymessages})
-//here we get ouwer message tommoro fetch it and make it look in the front 
-// and fix the ui and try to publish it
-// then lets focus on database more
+
 }
 console.log('what we send',mymessages)
 } catch (error) {
